@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\android_native_app_glue.c" />
+    <ClCompile Include="src\android_main.cpp" />
+    <ClCompile Include="src\game\game.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\framework\graphics\shader.cpp">
+      <Filter>framework\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\framework\util\file_utils.cpp">
+      <Filter>framework\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\framework\states\state_manager.cpp">
+      <Filter>framework\states</Filter>
+    </ClCompile>
+    <ClCompile Include="src\framework\input\virtual_joystick.cpp">
+      <Filter>framework\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\util\util.cpp">
+      <Filter>game\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\framework\graphics\texture.cpp">
+      <Filter>framework\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\framework\particles\state.cpp">
+      <Filter>framework\particles</Filter>
+    </ClCompile>
+    <ClCompile Include="src\framework\particles\manager.cpp">
+      <Filter>framework\particles</Filter>
+    </ClCompile>
+    <ClCompile Include="src\framework\graphics\texturedBox.cpp">
+      <Filter>framework\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\states\state_gameplay.cpp">
+      <Filter>game\states</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\states\state_menu.cpp">
+      <Filter>game\states</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\android_native_app_glue.h" />
+    <ClInclude Include="src\pch.h" />
+    <ClInclude Include="src\game\game.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\math\vec2.h">
+      <Filter>framework\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\math\vec3.h">
+      <Filter>framework\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\graphics\shader.h">
+      <Filter>framework\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\util\file_utils.h">
+      <Filter>framework\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\states\state_manager.h">
+      <Filter>framework\states</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\states\state.h">
+      <Filter>framework\states</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\input\virtual_joystick.h">
+      <Filter>framework\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\math\vec4.h">
+      <Filter>framework\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\math\math.h">
+      <Filter>framework\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\math\func.h">
+      <Filter>framework\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\math\mat4.h">
+      <Filter>framework\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\entities\entity.h">
+      <Filter>game\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\entities\movementSystem.h">
+      <Filter>game\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\graphics\gfx.h">
+      <Filter>framework\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\entities\renderSystem.h">
+      <Filter>game\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\graphics\vertex.h">
+      <Filter>framework\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\util\util.h">
+      <Filter>game\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\input\input.h">
+      <Filter>framework\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\entities\collisionSystem.h">
+      <Filter>game\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\entities\spawnSystem.h">
+      <Filter>game\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\util\tweener.h">
+      <Filter>framework\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\entities\debugRenderSystem.h">
+      <Filter>game\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\entities\shootSystem.h">
+      <Filter>game\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\graphics\texture.h">
+      <Filter>framework\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\particles\particle.h">
+      <Filter>framework\particles</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\particles\state.h">
+      <Filter>framework\particles</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\particles\manager.h">
+      <Filter>framework\particles</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\util\circularArray.h">
+      <Filter>framework\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\particles\ps.h">
+      <Filter>framework\particles</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\graphics\texturedBox.h">
+      <Filter>framework\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\util\singleton.h">
+      <Filter>framework\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\states\state_gameplay.h">
+      <Filter>game\states</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\states\state_menu.h">
+      <Filter>game\states</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\ecs\ecs.h">
+      <Filter>framework\ecs</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="framework">
+      <UniqueIdentifier>{5123a03b-365c-4592-b2c1-88f2d4183c26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game">
+      <UniqueIdentifier>{9b577b94-a59c-4309-acbf-f2eff8cf4e44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\graphics">
+      <UniqueIdentifier>{6205df76-dd22-467e-93e5-d74a6f820d25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\math">
+      <UniqueIdentifier>{20ecbd57-af1e-4c64-b600-9b207d5938b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\util">
+      <UniqueIdentifier>{9a103abd-d78f-4b73-9549-e0cf129de658}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\states">
+      <UniqueIdentifier>{3c6211ca-d1e3-4a7e-99ab-a647e64eb1ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\input">
+      <UniqueIdentifier>{c172bfe3-ffce-4b91-bc27-3bd28dbc15f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\ecs">
+      <UniqueIdentifier>{4a5c86e8-ae5e-4ad6-bb4f-5e0089aeca87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\states">
+      <UniqueIdentifier>{08a7d0eb-f704-4d16-ada4-7fc2341a60a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\entities">
+      <UniqueIdentifier>{269c8403-45ec-4c86-8463-0ca8c2298f10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game\util">
+      <UniqueIdentifier>{086afa94-2503-4931-bcc4-ceb857f6ca04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="framework\particles">
+      <UniqueIdentifier>{b39ba7e7-57e7-4e06-8088-2e9048833405}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\framework\math\func.inl">
+      <Filter>framework\math</Filter>
+    </None>
+  </ItemGroup>
+</Project>

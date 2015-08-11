@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\android_native_app_glue.c" />
+    <ClCompile Include="src\android_main.cpp" />
+    <ClCompile Include="src\framework\graphics\texture.cpp" />
+    <ClCompile Include="src\framework\graphics\texturedBox.cpp" />
+    <ClCompile Include="src\framework\particles\manager.cpp" />
+    <ClCompile Include="src\framework\particles\state.cpp" />
+    <ClCompile Include="src\framework\util\file_utils.cpp" />
+    <ClCompile Include="src\framework\graphics\shader.cpp" />
+    <ClCompile Include="src\framework\states\state_manager.cpp" />
+    <ClCompile Include="src\framework\input\virtual_joystick.cpp" />
+    <ClCompile Include="src\game\game.cpp" />
+    <ClCompile Include="src\game\states\state_gameplay.cpp" />
+    <ClCompile Include="src\game\states\state_menu.cpp" />
+    <ClCompile Include="src\game\util\util.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\android_native_app_glue.h" />
+    <ClInclude Include="src\framework\ecs\ecs.h" />
+    <ClInclude Include="src\framework\graphics\gfx.h" />
+    <ClInclude Include="src\framework\graphics\texture.h" />
+    <ClInclude Include="src\framework\graphics\texturedBox.h" />
+    <ClInclude Include="src\framework\graphics\vertex.h" />
+    <ClInclude Include="src\framework\input\input.h" />
+    <ClInclude Include="src\framework\math\func.h" />
+    <ClInclude Include="src\framework\math\mat4.h" />
+    <ClInclude Include="src\framework\math\math.h" />
+    <ClInclude Include="src\framework\math\vec4.h" />
+    <ClInclude Include="src\framework\particles\manager.h" />
+    <ClInclude Include="src\framework\particles\particle.h" />
+    <ClInclude Include="src\framework\particles\ps.h" />
+    <ClInclude Include="src\framework\particles\state.h" />
+    <ClInclude Include="src\framework\util\circularArray.h" />
+    <ClInclude Include="src\framework\util\file_utils.h" />
+    <ClInclude Include="src\framework\graphics\shader.h" />
+    <ClInclude Include="src\framework\states\state.h" />
+    <ClInclude Include="src\framework\states\state_manager.h" />
+    <ClInclude Include="src\framework\math\vec2.h" />
+    <ClInclude Include="src\framework\math\vec3.h" />
+    <ClInclude Include="src\framework\input\virtual_joystick.h" />
+    <ClInclude Include="src\framework\util\singleton.h" />
+    <ClInclude Include="src\framework\util\tweener.h" />
+    <ClInclude Include="src\game\entities\collisionSystem.h" />
+    <ClInclude Include="src\game\entities\debugRenderSystem.h" />
+    <ClInclude Include="src\game\entities\entity.h" />
+    <ClInclude Include="src\game\entities\movementSystem.h" />
+    <ClInclude Include="src\game\entities\renderSystem.h" />
+    <ClInclude Include="src\game\entities\shootSystem.h" />
+    <ClInclude Include="src\game\entities\spawnSystem.h" />
+    <ClInclude Include="src\game\game.h" />
+    <ClInclude Include="src\game\states\state_menu.h" />
+    <ClInclude Include="src\game\states\state_gameplay.h" />
+    <ClInclude Include="src\game\util\util.h" />
+    <ClInclude Include="src\pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\framework\math\func.inl" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{416cd8f7-a18c-4b2e-bfca-f031cf581c15}</ProjectGuid>
+    <Keyword>Android</Keyword>
+    <ProjectName>asteroids</ProjectName>
+    <RootNamespace>asteroids</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <ApplicationType>Android</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <UseOfStl>c++_static</UseOfStl>
+    <AndroidAPILevel>android-19</AndroidAPILevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <AndroidAPILevel>android-19</AndroidAPILevel>
+    <UseOfStl>c++_static</UseOfStl>
+    <ThumbMode>ARM</ThumbMode>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <UseOfStl>c++_static</UseOfStl>
+    <AndroidAPILevel>android-19</AndroidAPILevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <AndroidAPILevel>android-19</AndroidAPILevel>
+    <UseOfStl>c++_static</UseOfStl>
+    <ThumbMode>ARM</ThumbMode>
+    <PlatformToolset>Clang_3_4</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <IncludePath>$(NDKRoot)/sources/android/support/include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <IncludePath>$(NDKRoot)/sources/android/support/include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <IncludePath>$(NDKRoot)/sources/android/support/include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <IncludePath>$(NDKRoot)/sources/android/support/include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>src/pch.h</PrecompiledHeaderFile>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <DataLevelLinking>true</DataLevelLinking>
+      <EnableNeonCodegen>true</EnableNeonCodegen>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>%(LibraryDependencies);GLESv2;EGL;m</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>src/pch.h</PrecompiledHeaderFile>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>LineNumber</DebugInformationFormat>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>%(LibraryDependencies);GLESv2;EGL;m</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>src/pch.h</PrecompiledHeaderFile>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>%(LibraryDependencies);GLESv2;EGL;m</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>src/pch.h</PrecompiledHeaderFile>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <LibraryDependencies>%(LibraryDependencies);GLESv2;EGL;m</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
